@@ -2,7 +2,6 @@ from flask import Flask, send_file, request
 import onnxruntime
 import numpy as np
 from nltk import word_tokenize
-import time
 
 app = Flask(__name__, static_folder="web", static_url_path="/")
 app.config['UPLOAD_FOLDER'] = "web/uploads"
