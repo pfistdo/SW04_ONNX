@@ -3,6 +3,7 @@ import onnxruntime
 import numpy as np
 from nltk import word_tokenize
 import nltk
+nltk.download('punkt')
 
 app = Flask(__name__, static_folder="web", static_url_path="/")
 app.config['UPLOAD_FOLDER'] = "web/uploads"
@@ -46,5 +47,4 @@ def answer_question():
         # @author: https://github.com/onnx/models/tree/main/text/machine_comprehension/bidirectional_attention_flow
   
 if __name__ == "__main__":
-    nltk.download('punkt')
     app.run()
