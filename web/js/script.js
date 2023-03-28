@@ -19,7 +19,8 @@ function answer_query() {
         document.getElementById("answer").value = response;
       },
       error: function (response) {
-        alert(response, "danger");
+        console.log(response)
+        alert("An unexpected error occured...", "danger");
       },
       complete: function () {
         btn.classList.remove("button--loading");
